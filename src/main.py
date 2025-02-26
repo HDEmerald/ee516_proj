@@ -5,23 +5,18 @@ import loader
 (train_data, valid_data, test_data) = loader.load_data_wrapper()
 
 # List of sizes of each layer of nodes
+# The list of layers for the Neocognitron goes:
+# U0, U_S1, U_C1, U_S2, U_C2, U_S3, U_C3, U_S4, U_C4
+# The S layers get an additional plane for the V cells
 sizes = [19*19, 
-         19*19*12, 
+         19*19*(12+1), 
          21*21*8, 
-         21*21*80, 
+         21*21*(80+1), 
          13*13*33, 
-         13*13*97, 
+         13*13*(97+1), 
          7*7*64, 
-         3*3*47, 
+         3*3*(47+1), 
          1*35]
 
 # Create neural network
 nn = network.Network(sizes)
-
-# Train the neural network
-nn.SGD(train_data, 25, 10, 0.05)
-
-# Evaluate the model and print the correct results
-print(str(nn.evaluate(test_data)) + 
-      " correct results out of " + 
-      str(len(test_data)))
