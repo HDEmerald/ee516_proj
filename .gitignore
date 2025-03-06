@@ -1,4 +1,9 @@
 # Enviroment Files
 ##################
+facedetect/
+.ipynb_checkpoints/*
+.ipynb_checkpoints/
 
-/facedetect/
+# Dumb files
+convert.py
+data/*
