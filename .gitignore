@@ -8,4 +8,3 @@ facedetect/
 convert.py
 data/*
 logs/
-facetracker.keras
