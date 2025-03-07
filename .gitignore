@@ -7,3 +7,5 @@ facedetect/
 # Dumb files
 convert.py
 data/*
+logs/
+facetracker.keras
