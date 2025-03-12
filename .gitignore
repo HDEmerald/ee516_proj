@@ -5,7 +5,8 @@ facedetect/
 .ipynb_checkpoints/
 
 # Dumb files
-convert.py
+__pycache__/
 data/*
 logs/
 facetracker.keras
+ssd.keras
